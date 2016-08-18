@@ -18,6 +18,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <fadou.version>1.0-SNAPSHOT</fadou.version>
         <springboot.version>1.4.0.RELEASE</springboot.version>
+        <junit.version>4.12</junit.version>
+        <h2.version>1.4.192</h2.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -76,12 +78,28 @@
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+                <scope>runtime</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
 </project>
